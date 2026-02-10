@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics - Perfectly Competitive Markets (SIMPLIFIED)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;600;700&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Calibri', 'Arial', sans-serif;
+        background: #FFFFFF;
+        color: #1E3A5F;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 250px 40px;
+        min-height: 100vh;
+        background: #FFFFFF;
+    }
+
+    .slide {
+        display: none;
+        animation: slideIn 0.5s ease-out;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-header {
+        margin-bottom: 30px;
+        border-bottom: 3px solid #003D5C;
+        padding-bottom: 15px;
+    }
+
+    .slide-number {
+        font-size: 13px;
+        font-weight: 600;
+        color: #4A90C5;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-family: 'Arial', sans-serif;
+        font-size: 44px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: #003D5C;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 25px 0 15px;
+        color: #003D5C;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 20px 0 12px;
+        color: #2E5C8A;
+    }
+
+    /* BIG VISUAL BOX - Takes up space, easy to see */
+    .big-visual {
+        background: linear-gradient(135deg, #F8F9FA 0%, #E8F4F8 100%);
+        border: 3px solid #4A90C5;
+        padding: 50px;
+        margin: 30px 0;
+        border-radius: 12px;
+        text-align: center;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .big-visual h2 {
+        font-size: 48px;
+        color: #003D5C;
+        margin-bottom: 20px;
+    }
+
+    .big-visual p {
+        font-size: 24px;
+        color: #1E3A5F;
+        line-height: 1.6;
+    }
+
+    /* SIMPLE BOX - Plain explanation */
+    .simple-box {
+        background: #FFFFFF;
+        border-left: 5px solid #4A90C5;
+        padding: 25px 30px;
+        margin: 25px 0;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .simple-box p {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    .simple-box strong {
+        color: #003D5C;
+        font-size: 24px;
+    }
+
+    /* EXAMPLE BOX - Clear real-world example */
+    .example-box {
+        background: #FFF9E6;
+        border: 3px solid #F59E0B;
+        border-radius: 8px;
+        padding: 30px;
+        margin: 25px 0;
+    }
+
+    .example-box h3 {
+        color: #92400E;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .example-box p {
+        font-size: 20px;
+        line-height: 1.8;
+        margin: 12px 0;
+    }
+
+    /* TEXTBOOK BOX - Small at bottom */
+    .textbook-box {
+        background: #E8F4F8;
+        border: 2px solid #4A90C5;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 25px 0;
+        font-size: 16px;
+    }
+
+    .textbook-box h4 {
+        color: #003D5C;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    /* QUIZ STYLING */
+    .question-box {
+        background: #F0F7FF;
+        border: 3px solid #4A90C5;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+
+    .mcq-option {
+        background: #FFFFFF;
+        border: 2px solid #D0D0D0;
+        padding: 18px 25px;
+        margin: 15px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 18px;
+    }
+
+    .mcq-option:hover {
+        border-color: #4A90C5;
+        background: #E8F4F8;
+        transform: translateX(5px);
+    }
+
+    .mcq-option.correct {
+        border-color: #10B981;
+        background: #D1FAE5;
+    }
+
+    .mcq-option.incorrect {
+        border-color: #EF4444;
+        background: #FEE2E2;
+    }
+
+    .show-answer-btn {
+        background: #003D5C;
+        color: white;
+        border: none;
+        padding: 14px 35px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .show-answer-btn:hover {
+        background: #002840;
+        transform: translateY(-2px);
+    }
+
+    .answer-explanation {
+        display: none;
+        margin-top: 25px;
+        padding: 25px;
+        background: #F0FFF4;
+        border: 3px solid #10B981;
+        border-radius: 6px;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .answer-explanation.show {
+        display: block;
+    }
+
+    .feedback {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 18px;
+        display: none;
+    }
+
+    .feedback.show {
+        display: block;
+    }
+
+    .feedback.correct {
+        background: #D1FAE5;
+        color: #065F46;
+        border: 2px solid #10B981;
+    }
+
+    .feedback.incorrect {
+        background: #FEE2E2;
+        color: #991B1B;
+        border: 2px solid #EF4444;
+    }
+
+    .highlight {
+        background: #FEF3C7;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: 700;
+        color: #92400E;
+    }
+
+    ul {
+        margin: 20px 0;
+        padding-left: 40px;
+    }
+
+    li {
+        margin: 12px 0;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    .checkmark {
+        color: #10B981;
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    .crossmark {
+        color: #EF4444;
+        font-size: 28px;
+        margin-right: 10px;
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: What is Demand? -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-header">
+                <div class="slide-number">SLIDE 01 / 20</div>
+                <h1>What is DEMAND?</h1>
+            </div>
+
+```
+        <div class="big-visual">
+            <h2>DEMAND = Want It + Can Afford It</h2>
+            <p style="margin-top: 30px; font-size: 28px;">BOTH must be true!</p>
+        </div>
+
+        <div class="simple-box">
+            <p><span class="checkmark">✓</span> <strong>Want iPhone + Have £1,000 = DEMAND</strong></p>
+            <p><span class="crossmark">✗</span> Want iPhone but broke = NO demand</p>
+            <p><span class="crossmark">✗</span> Rich but don't want iPhone = NO demand</p>
+        </div>
+
+        <div class="example-box">
+            <h3>🎮 Simple Example: PlayStation 5</h3>
+            <p><strong>Person A:</strong> Really wants PS5, has £500 → <span class="highlight">HAS DEMAND</span></p>
+            <p><strong>Person B:</strong> Wants PS5, but only has £200 → <span class="highlight">NO DEMAND</span> (can't afford)</p>
+            <p><strong>Person C:</strong> Has £500, but doesn't want PS5 → <span class="highlight">NO DEMAND</span> (doesn't want it)</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM (Mulhearn & Vane, Ch. 2)</h4>
+            <p>"Demand = the quantity consumers are <strong>willing</strong> (want it) <strong>AND able</strong> (can afford it) to purchase at various prices."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Law of Demand -->
+    <div class="slide" data-slide="2">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 02 / 20</div>
+            <h1>LAW OF DEMAND</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2 style="color: #DC2626;">Price Goes UP ↑</h2>
+            <p style="font-size: 36px; margin: 20px 0;">⬇</p>
+            <h2 style="color: #10B981;">People Buy LESS ↓</h2>
+        </div>
+
+        <div class="example-box">
+            <h3>🎬 Netflix Example (2023)</h3>
+            <p><strong>What happened:</strong></p>
+            <p>Netflix raised price: <span class="highlight">£20 → £23</span></p>
+            <p><strong>Result:</strong></p>
+            <p>Lost <span class="highlight">1.2 MILLION subscribers</span></p>
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Higher price → Less demand!</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>Why does this happen?</strong></p>
+            <p>1. Can't afford it anymore (too expensive!)</p>
+            <p>2. Switch to cheaper option (Disney+ stayed £14)</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Law of Demand: Price and quantity demanded move in OPPOSITE directions. When price ↑, quantity demanded ↓"</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Demand Quiz -->
+    <div class="slide" data-slide="3">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 03 / 20</div>
+            <h1>✓ Check Understanding: Demand</h1>
+        </div>
+
+        <div class="question-box">
+            <h3 style="color: #003D5C; font-size: 24px;">Tesla cuts car price by £10,000. What happens?</h3>
+            <div class="mcq-option" onclick="checkAnswer(3, 'A', false)">
+                A) Fewer people want to buy Teslas
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(3, 'B', true)">
+                B) More people buy Teslas (lower price = more sales!)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(3, 'C', false)">
+                C) Nothing changes
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(3, 'D', false)">
+                D) Tesla makes more cars
+            </div>
+            <div class="feedback" id="feedback-3"></div>
+            <button class="show-answer-btn" onclick="toggleExplanation(3)">Show Answer</button>
+            <div class="answer-explanation" id="explanation-3"></div>
+        </div>
+    </div>
+
+    <!-- Slide 4: What is Supply? -->
+    <div class="slide" data-slide="4">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 04 / 20</div>
+            <h1>What is SUPPLY?</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>SUPPLY = How much businesses want to sell</h2>
+            <p style="margin-top: 30px; font-size: 28px;">Higher price = Make MORE!</p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>Why do businesses make more when price is high?</strong></p>
+            <p><span class="checkmark">✓</span> More profit per item sold</p>
+            <p><span class="checkmark">✓</span> Worth the effort to produce more</p>
+            <p><span class="checkmark">✓</span> Can afford higher production costs</p>
+        </div>
+
+        <div class="example-box">
+            <h3>🍕 Simple Example: Pizza Shop</h3>
+            <p><strong>Scenario A:</strong> Pizza price = £8</p>
+            <p>Shop makes <span class="highlight">50 pizzas/day</span> (small profit)</p>
+            
+            <p style="margin-top: 20px;"><strong>Scenario B:</strong> Pizza price = £15</p>
+            <p>Shop makes <span class="highlight">100 pizzas/day</span> (BIG profit!)</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Higher price → Make more!</strong></p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM (Mulhearn & Vane, Ch. 2)</h4>
+            <p>"Supply = the quantity producers are willing to offer for sale at various prices. Driven by profit motive."</p>
+        </div>
+    </div>
+
+    <!-- Slide 5: Law of Supply -->
+    <div class="slide" data-slide="5">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 05 / 20</div>
+            <h1>LAW OF SUPPLY</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2 style="color: #10B981;">Price Goes UP ↑</h2>
+            <p style="font-size: 36px; margin: 20px 0;">⬇</p>
+            <h2 style="color: #10B981;">Businesses Make MORE ↑</h2>
+        </div>
+
+        <div class="example-box">
+            <h3>💻 NVIDIA Chips Example (2023-2024)</h3>
+            <p><strong>What happened:</strong></p>
+            <p>AI boom! Chip prices soared: <span class="highlight">£25,000 → £40,000</span></p>
+            
+            <p style="margin-top: 20px;"><strong>NVIDIA's response:</strong></p>
+            <p>Made <span class="highlight">50,000 chips</span> in early 2023</p>
+            <p>Made <span class="highlight">550,000 chips</span> by end of 2023 (11x MORE!)</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Higher price → Made WAY more!</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>Why did NVIDIA make so many more?</strong></p>
+            <p>Simple: <span class="highlight">More profit at higher prices!</span></p>
+            <p>Worth building new factories and hiring workers</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Law of Supply: Price and quantity supplied move in the SAME direction. When price ↑, quantity supplied ↑"</p>
+        </div>
+    </div>
+
+    <!-- Slide 6: Supply Quiz -->
+    <div class="slide" data-slide="6">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 06 / 20</div>
+            <h1>✓ Check Understanding: Supply</h1>
+        </div>
+
+        <div class="question-box">
+            <h3 style="color: #003D5C; font-size: 24px;">Coffee bean prices DOUBLE. What do farmers do?</h3>
+            <div class="mcq-option" onclick="checkAnswer(6, 'A', false)">
+                A) Grow less coffee (too expensive)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(6, 'B', true)">
+                B) Grow MORE coffee (higher profit!)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(6, 'C', false)">
+                C) Nothing changes
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(6, 'D', false)">
+                D) Stop farming coffee
+            </div>
+            <div class="feedback" id="feedback-6"></div>
+            <button class="show-answer-btn" onclick="toggleExplanation(6)">Show Answer</button>
+            <div class="answer-explanation" id="explanation-6"></div>
+        </div>
+    </div>
+
+    <!-- Slide 7: What is Equilibrium? - SUPER SIMPLE! -->
+    <div class="slide" data-slide="7">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 07 / 20</div>
+            <h1>MARKET EQUILIBRIUM</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2 style="color: #4A90C5;">Buyers want 100 pizzas</h2>
+            <p style="font-size: 48px; margin: 20px 0;">+</p>
+            <h2 style="color: #10B981;">Sellers make 100 pizzas</h2>
+            <p style="font-size: 48px; margin: 20px 0;">=</p>
+            <h2 style="color: #F59E0B;">EQUILIBRIUM! ✓</h2>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>What is equilibrium?</strong></p>
+            <p>When supply = demand</p>
+            <p>Everyone who wants to buy can find a seller</p>
+            <p>Everyone who wants to sell finds a buyer</p>
+            <p style="margin-top: 20px;"><span class="highlight">No shortages, no leftovers = PERFECT!</span></p>
+        </div>
+
+        <div class="example-box">
+            <h3>🎮 PlayStation 5 at Equilibrium</h3>
+            <p>Price: <span class="highlight">£500</span></p>
+            <p>Sony makes: 1 million PS5s</p>
+            <p>Gamers buy: 1 million PS5s</p>
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Perfect match = Equilibrium!</strong></p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Market equilibrium occurs where quantity demanded = quantity supplied (Qd = Qs)"</p>
+        </div>
+    </div>
+
+    <!-- Slide 8: TOO MUCH (Surplus) - DEAD SIMPLE! -->
+    <div class="slide" data-slide="8">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 08 / 20</div>
+            <h1>What if Price is TOO HIGH?</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>TOO EXPENSIVE = SURPLUS</h2>
+            <p style="font-size: 32px; margin: 30px 0;">
+                Shelves FULL of unsold stuff 📦📦📦
+            </p>
+            <h2 style="color: #DC2626;">Price DROPS until it sells!</h2>
+        </div>
+
+        <div class="example-box">
+            <h3>🎮 PlayStation 5 Example</h3>
+            <p><strong>Scenario:</strong></p>
+            <p>Sony charges <span class="highlight">£700</span> (too expensive!)</p>
+            <p>Makes: 1 million PS5s</p>
+            <p>Only 400,000 people buy (600,000 left over!)</p>
+            
+            <p style="margin-top: 20px;"><strong>What happens?</strong></p>
+            <p>Sony drops price: £700 → £600 → £500</p>
+            <p>At £500, all 1 million sell out!</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Price drops until surplus disappears!</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>The Rule:</strong></p>
+            <p>Surplus (leftovers) → Price falls → Until it all sells</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Surplus occurs when Qs > Qd. Price mechanism eliminates surplus through price reduction."</p>
+        </div>
+    </div>
+
+    <!-- Slide 9: TOO LITTLE (Shortage) - DEAD SIMPLE! -->
+    <div class="slide" data-slide="9">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 09 / 20</div>
+            <h1>What if Price is TOO LOW?</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>TOO CHEAP = SHORTAGE</h2>
+            <p style="font-size: 32px; margin: 30px 0;">
+                SOLD OUT! Empty shelves! 😭
+            </p>
+            <h2 style="color: #10B981;">Price RISES until demand cools!</h2>
+        </div>
+
+        <div class="example-box">
+            <h3>🎤 Taylor Swift Concert Tickets</h3>
+            <p><strong>Scenario:</strong></p>
+            <p>Ticketmaster price: <span class="highlight">£200</span> (too cheap!)</p>
+            <p>Available: 50,000 tickets</p>
+            <p>Fans trying to buy: 500,000 people!</p>
+            
+            <p style="margin-top: 20px;"><strong>What happens?</strong></p>
+            <p>Resellers (scalpers) charge MORE:</p>
+            <p>£200 → £500 → £2,000 → £5,000</p>
+            <p>At £5,000, only 50,000 people willing to pay</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Price rises until shortage disappears!</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>The Rule:</strong></p>
+            <p>Shortage (sold out) → Price rises → Until demand = supply</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Shortage occurs when Qd > Qs. Price mechanism eliminates shortage through price increases."</p>
+        </div>
+    </div>
+
+    <!-- Slide 10: Hayek - SIMPLIFIED! -->
+    <div class="slide" data-slide="10">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 10 / 20</div>
+            <h1>How Prices Send Signals</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>Prices = Automatic Signals</h2>
+            <p style="font-size: 28px; margin: 30px 0;">
+                No boss needed! Price tells everyone what to do.
+            </p>
+        </div>
+
+        <div class="example-box">
+            <h3>🚗 Uber Surge Pricing (Simple!)</h3>
+            <p><strong>Normal Friday night:</strong></p>
+            <p>Ride costs <span class="highlight">£10</span></p>
+            
+            <p style="margin-top: 20px;"><strong>New Year's Eve (everyone wants ride!):</strong></p>
+            <p>Ride costs <span class="highlight">£30</span> (3x surge!)</p>
+            
+            <p style="margin-top: 20px;"><strong>What does the £30 price tell people?</strong></p>
+            <p><span class="checkmark">✓</span> <strong>Drivers:</strong> "High demand! Come drive NOW = earn more!"</p>
+            <p><span class="checkmark">✓</span> <strong>Riders:</strong> "Expensive! Only take ride if really need it."</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>No central planner! Price coordinates everyone automatically!</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>Hayek's Big Idea:</strong></p>
+            <p>Prices transmit information WITHOUT anyone being in charge</p>
+            <p>Higher price = "Come here! Make this! Demand is high!"</p>
+            <p>Lower price = "Too much supply! Make less! Demand is low!"</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 HAYEK QUOTE (1945)</h4>
+            <p>"The price mechanism coordinates economic activity WITHOUT central planning. Prices transmit information through the economy automatically."</p>
+            <p style="margin-top: 10px;">- F.A. Hayek, "The Use of Knowledge in Society"</p>
+        </div>
+    </div>
+
+    <!-- Slide 11: Quiz - Price Mechanism -->
+    <div class="slide" data-slide="11">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 11 / 20</div>
+            <h1>✓ Check Understanding: Price Mechanism</h1>
+        </div>
+
+        <div class="question-box">
+            <h3 style="color: #003D5C; font-size: 24px;">Coffee shop makes 100 coffees but only sells 60. What should happen to price?</h3>
+            <div class="mcq-option" onclick="checkAnswer(11, 'A', false)">
+                A) Price should rise (demand is high!)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(11, 'B', true)">
+                B) Price should fall (too many leftovers = surplus)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(11, 'C', false)">
+                C) Price stays the same
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(11, 'D', false)">
+                D) Shop should make more coffees
+            </div>
+            <div class="feedback" id="feedback-11"></div>
+            <button class="show-answer-btn" onclick="toggleExplanation(11)">Show Answer</button>
+            <div class="answer-explanation" id="explanation-11"></div>
+        </div>
+    </div>
+
+    <!-- Slide 12: 4 Free Market Assumptions -->
+    <div class="slide" data-slide="12">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 12 / 20</div>
+            <h1>4 Things Free Markets Need</h1>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>1. Free Price Adjustment</strong></p>
+            <p>→ Prices can go up or down freely (no government controls)</p>
+            
+            <p style="margin-top: 20px;"><strong>2. No Barriers to Entry/Exit</strong></p>
+            <p>→ Anyone can start business, anyone can quit</p>
+            
+            <p style="margin-top: 20px;"><strong>3. Perfect Information</strong></p>
+            <p>→ Everyone knows all prices and quality</p>
+            
+            <p style="margin-top: 20px;"><strong>4. Many Small Buyers/Sellers</strong></p>
+            <p>→ No single person controls the market</p>
+        </div>
+
+        <div class="big-visual">
+            <h2>When ALL 4 exist:</h2>
+            <p style="font-size: 32px; margin: 20px 0; color: #10B981;">Markets work EFFICIENTLY! ✓</p>
+            <h2>When ANY missing:</h2>
+            <p style="font-size: 32px; margin: 20px 0; color: #DC2626;">Markets have PROBLEMS! ✗</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"For price mechanism to achieve efficiency, markets require: price flexibility, free entry/exit, symmetric information, and atomistic competition."</p>
+        </div>
+    </div>
+
+    <!-- Slide 13: What Breaks Free Markets? -->
+    <div class="slide" data-slide="13">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 13 / 20</div>
+            <h1>What BREAKS Free Markets?</h1>
+        </div>
+
+        <div class="example-box">
+            <h3>❌ Example 1: Rent Control (NYC)</h3>
+            <p><strong>Government says:</strong> "Rent can't go above £1,500"</p>
+            <p><strong>Market wants:</strong> £3,500</p>
+            <p><strong>Result:</strong> Massive shortage! 200,000 people waiting for apartments</p>
+            <p><strong>Which assumption broken?</strong> <span class="highlight">#1 Free Price Adjustment</span></p>
+        </div>
+
+        <div class="example-box">
+            <h3>❌ Example 2: Pharmaceutical Patents</h3>
+            <p><strong>Drug company invents new medicine</strong></p>
+            <p><strong>Gets 20-year monopoly (patent protection)</strong></p>
+            <p><strong>Result:</strong> No competitors can enter market!</p>
+            <p><strong>Which assumption broken?</strong> <span class="highlight">#2 No Barriers to Entry</span></p>
+        </div>
+
+        <div class="example-box">
+            <h3>❌ Example 3: Used Car Market</h3>
+            <p><strong>Seller knows:</strong> Car has hidden problems</p>
+            <p><strong>Buyer doesn't know:</strong> Car looks good!</p>
+            <p><strong>Result:</strong> Buyer overpays for bad car</p>
+            <p><strong>Which assumption broken?</strong> <span class="highlight">#3 Perfect Information</span></p>
+        </div>
+
+        <div class="example-box">
+            <h3>❌ Example 4: Google Search</h3>
+            <p><strong>Google controls 92% of search market</strong></p>
+            <p><strong>Can set prices however it wants</strong></p>
+            <p><strong>Result:</strong> Not competitive!</p>
+            <p><strong>Which assumption broken?</strong> <span class="highlight">#4 Many Small Sellers</span></p>
+        </div>
+    </div>
+
+    <!-- Slide 14: Quiz - Assumptions -->
+    <div class="slide" data-slide="14">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 14 / 20</div>
+            <h1>✓ Check Understanding: Free Markets</h1>
+        </div>
+
+        <div class="question-box">
+            <h3 style="color: #003D5C; font-size: 24px;">UK requires taxi drivers to pass expensive 3-year test costing £3,000. Which assumption does this break?</h3>
+            <div class="mcq-option" onclick="checkAnswer(14, 'A', false)">
+                A) Perfect information
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(14, 'B', true)">
+                B) No barriers to entry (test makes it hard to become driver!)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(14, 'C', false)">
+                C) Free price adjustment
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(14, 'D', false)">
+                D) Many small sellers
+            </div>
+            <div class="feedback" id="feedback-14"></div>
+            <button class="show-answer-btn" onclick="toggleExplanation(14)">Show Answer</button>
+            <div class="answer-explanation" id="explanation-14"></div>
+        </div>
+    </div>
+
+    <!-- Slide 15: Perfect Competition - 5 Characteristics -->
+    <div class="slide" data-slide="15">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 15 / 20</div>
+            <h1>PERFECT COMPETITION</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>The 5 Characteristics</h2>
+        </div>
+
+        <div class="simple-box" style="font-size: 22px;">
+            <p><strong>1. MANY buyers and sellers</strong> (thousands of them!)</p>
+            <p><strong>2. IDENTICAL products</strong> (can't tell difference between sellers)</p>
+            <p><strong>3. PERFECT information</strong> (everyone knows all prices)</p>
+            <p><strong>4. FREE entry/exit</strong> (easy to start, easy to quit)</p>
+            <p><strong>5. PRICE TAKERS</strong> (can't control price, must accept market price)</p>
+        </div>
+
+        <div class="example-box">
+            <h3>🌾 Example: Wheat Farming</h3>
+            <p><span class="checkmark">✓</span> <strong>Many sellers:</strong> Millions of wheat farmers</p>
+            <p><span class="checkmark">✓</span> <strong>Identical product:</strong> Wheat is wheat (all the same!)</p>
+            <p><span class="checkmark">✓</span> <strong>Perfect info:</strong> Chicago prices published 24/7</p>
+            <p><span class="checkmark">✓</span> <strong>Free entry:</strong> Anyone with land can plant wheat</p>
+            <p><span class="checkmark">✓</span> <strong>Price taker:</strong> Farmer MUST accept £6/bushel market price</p>
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Wheat = Nearly perfect competition!</strong></p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM (Mulhearn & Vane, Ch. 5)</h4>
+            <p>"Perfect competition: numerous firms, homogeneous products, perfect information, free entry/exit, price-taking behavior."</p>
+        </div>
+    </div>
+
+    <!-- Slide 16: Price Taker Explained -->
+    <div class="slide" data-slide="16">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 16 / 20</div>
+            <h1>What is a PRICE TAKER?</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>Price Taker = MUST accept market price</h2>
+            <p style="font-size: 28px; margin: 30px 0;">
+                Can't charge more (customers go elsewhere)<br>
+                Won't charge less (lose money for no reason)
+            </p>
+        </div>
+
+        <div class="example-box">
+            <h3>🌾 Farmer John's Wheat</h3>
+            <p><strong>Chicago market price: £6.20/bushel</strong></p>
+            
+            <p style="margin-top: 20px;"><strong>What if John charges £7?</strong></p>
+            <p><span class="crossmark">✗</span> ZERO sales (buyers go to other farmers at £6.20)</p>
+            
+            <p style="margin-top: 20px;"><strong>What if John charges £5?</strong></p>
+            <p><span class="crossmark">✗</span> Loses £1.20 × 50,000 bushels = <span class="highlight">£60,000 lost!</span></p>
+            
+            <p style="margin-top: 20px;"><strong>John MUST charge £6.20</strong></p>
+            <p>He's a "price taker" - takes the market price, can't change it!</p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>Why can't John control price?</strong></p>
+            <p>He's TOO SMALL! His farm = 0.00002% of market</p>
+            <p>His decision doesn't matter to overall market</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Price Taker: A firm that must accept the market price and cannot influence it through its own actions. In perfect competition, P = MR = AR for all firms."</p>
+        </div>
+    </div>
+
+    <!-- Slide 17: Profit Maximization -->
+    <div class="slide" data-slide="17">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 17 / 20</div>
+            <h1>How Firms Maximize Profit</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>The Golden Rule:</h2>
+            <p style="font-size: 48px; margin: 30px 0; color: #F59E0B;">MR = MC</p>
+            <p style="font-size: 24px;">Make products until cost = revenue for last unit</p>
+        </div>
+
+        <div class="example-box">
+            <h3>🚗 Uber Driver Example (Simple!)</h3>
+            <p><strong>Uber pays £10 per ride</strong></p>
+            
+            <p style="margin-top: 20px;"><strong>Rides 1-10:</strong> Cost £5 each (petrol)</p>
+            <p><span class="checkmark">✓</span> Earn £10, spend £5 = <span class="highlight">£5 profit per ride</span> → DO THESE!</p>
+            
+            <p style="margin-top: 20px;"><strong>Rides 11-15:</strong> Cost £8 each (getting tired, further away)</p>
+            <p><span class="checkmark">✓</span> Earn £10, spend £8 = <span class="highlight">£2 profit per ride</span> → DO THESE!</p>
+            
+            <p style="margin-top: 20px;"><strong>Ride 16:</strong> Cost £12 (exhausted, very far from home)</p>
+            <p><span class="crossmark">✗</span> Earn £10, spend £12 = <span class="highlight">LOSE £2!</span> → STOP!</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>Optimal: Stop at 15 rides where MR ≈ MC</strong></p>
+        </div>
+
+        <div class="simple-box">
+            <p><strong>The Rule (Simple!):</strong></p>
+            <p>If next unit makes profit → Make it!</p>
+            <p>If next unit loses money → Don't make it!</p>
+            <p>Stop where profit on last unit = £0</p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Profit maximization: MR = MC. In perfect competition, since P = MR, firms produce where P = MC."</p>
+        </div>
+    </div>
+
+    <!-- Slide 18: Long-Run Equilibrium -->
+    <div class="slide" data-slide="18">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 18 / 20</div>
+            <h1>Long-Run: Zero Profit</h1>
+        </div>
+
+        <div class="big-visual">
+            <h2>If High Profit → New firms enter</h2>
+            <p style="font-size: 36px; margin: 20px 0;">⬇</p>
+            <h2>Supply ↑ → Price ↓ → Profit disappears</h2>
+        </div>
+
+        <div class="example-box">
+            <h3>🍕 Pizza Restaurant Story (2020-2024)</h3>
+            <p><strong>2020:</strong> Lockdown! Pizza delivery booming!</p>
+            <p>Profit per pizza: <span class="highlight">£7</span> (HUGE!)</p>
+            
+            <p style="margin-top: 20px;"><strong>2021-2022:</strong> Everyone sees high profit!</p>
+            <p>New pizza places open EVERYWHERE</p>
+            <p>London: 2,400 → 3,800 restaurants (+58%!)</p>
+            
+            <p style="margin-top: 20px;"><strong>2023:</strong> TOO MANY pizza places!</p>
+            <p>Price war! £18 → £14 per pizza</p>
+            <p>Profit shrinks: £7 → £2</p>
+            
+            <p style="margin-top: 20px;"><strong>2024:</strong> 400 restaurants CLOSE</p>
+            <p>Only efficient ones survive</p>
+            <p>Profit now: £2 (just enough to stay in business)</p>
+            
+            <p style="margin-top: 20px; font-size: 24px;"><strong>High profit attracted entry → Profit disappeared!</strong></p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 TEXTBOOK TERM</h4>
+            <p>"Long-run equilibrium: Free entry/exit drives economic profit to zero. Firms earn only normal profit (covering opportunity cost)."</p>
+        </div>
+    </div>
+
+    <!-- Slide 19: Quiz - Perfect Competition -->
+    <div class="slide" data-slide="19">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 19 / 20</div>
+            <h1>✓ Check Understanding: Perfect Competition</h1>
+        </div>
+
+        <div class="question-box">
+            <h3 style="color: #003D5C; font-size: 24px;">In perfect competition, why do firms keep operating if profit is zero in long run?</h3>
+            <div class="mcq-option" onclick="checkAnswer(19, 'A', false)">
+                A) They hope profit will return someday
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(19, 'B', true)">
+                B) Zero ECONOMIC profit still covers all costs (including owner's salary!)
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(19, 'C', false)">
+                C) Government forces them to stay open
+            </div>
+            <div class="mcq-option" onclick="checkAnswer(19, 'D', false)">
+                D) They don't realize they're making zero profit
+            </div>
+            <div class="feedback" id="feedback-19"></div>
+            <button class="show-answer-btn" onclick="toggleExplanation(19)">Show Answer</button>
+            <div class="answer-explanation" id="explanation-19"></div>
+        </div>
+    </div>
+
+    <!-- Slide 20: SUMMARY -->
+    <div class="slide" data-slide="20">
+        <div class="slide-header">
+            <div class="slide-number">SLIDE 20 / 20</div>
+            <h1>SUMMARY: Everything You Learned</h1>
+        </div>
+
+        <div class="simple-box" style="font-size: 20px;">
+            <p><strong>DEMAND:</strong> Want it + Can afford it. Price ↑ = Buy less</p>
+            <p><strong>SUPPLY:</strong> How much firms make. Price ↑ = Make more</p>
+            <p><strong>EQUILIBRIUM:</strong> Where supply = demand (perfect balance!)</p>
+            <p><strong>SURPLUS:</strong> Too much → Price falls</p>
+            <p><strong>SHORTAGE:</strong> Too little → Price rises</p>
+            <p><strong>HAYEK:</strong> Prices send automatic signals (no boss needed!)</p>
+            <p><strong>FREE MARKETS NEED:</strong> Free prices, No barriers, Perfect info, Many sellers</p>
+            <p><strong>PERFECT COMPETITION:</strong> 5 characteristics, Price takers, Profit → Zero long-run</p>
+        </div>
+
+        <div class="big-visual">
+            <h2 style="color: #10B981;">🎓 YOU DID IT!</h2>
+            <p style="font-size: 24px; margin: 30px 0;">
+                You now understand how markets work!
+            </p>
+        </div>
+
+        <div class="textbook-box">
+            <h4>📚 KEY FORMULAS TO REMEMBER</h4>
+            <p><strong>Equilibrium:</strong> Qd = Qs</p>
+            <p><strong>Profit Max:</strong> MR = MC (or P = MC in perfect competition)</p>
+            <p><strong>Long-Run:</strong> P = MC = ATC (zero economic profit)</p>
+        </div>
+
+        <div style="margin-top: 30px; padding: 25px; background: #E8F4F8; border-radius: 8px; border-left: 5px solid #003D5C;">
+            <p style="font-size: 22px; color: #003D5C;"><strong>What's Next?</strong></p>
+            <p style="font-size: 18px; margin-top: 15px;">Study how REAL markets work (monopolies, oligopolies) - they break perfect competition rules!</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- NAVIGATION -->
+<div style="position:fixed!important;bottom:0!important;left:0!important;right:0!important;width:100%!important;background:#FFFFFF!important;padding:20px 40px!important;border-top:3px solid #003D5C!important;box-shadow:0 -4px 12px rgba(0,61,92,0.2)!important;z-index:999999!important;display:flex!important;justify-content:space-between!important;align-items:center!important;">
+    <button id="prevBtn" onclick="changeSlide(-1)" style="background:#003D5C!important;color:white!important;border:none!important;padding:15px 30px!important;border-radius:6px!important;cursor:pointer!important;font-size:18px!important;font-weight:600!important;">← Previous</button>
+    <div style="flex-grow:1!important;height:10px!important;background:#E0E0E0!important;border-radius:10px!important;margin:0 30px!important;overflow:hidden!important;">
+        <div id="progressBar" style="height:100%!important;background:linear-gradient(90deg,#4A90C5 0%,#003D5C 100%)!important;border-radius:10px!important;width:5%!important;transition:width 0.5s ease!important;"></div>
+    </div>
+    <button id="nextBtn" onclick="changeSlide(1)" style="background:#003D5C!important;color:white!important;border:none!important;padding:15px 30px!important;border-radius:6px!important;cursor:pointer!important;font-size:18px!important;font-weight:600!important;">Next →</button>
+</div>
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 20;
+
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.slide');
+        if (n > totalSlides) currentSlide = totalSlides;
+        else if (n < 1) currentSlide = 1;
+        else currentSlide = n;
+
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[currentSlide - 1].classList.add('active');
+
+        document.getElementById('progressBar').style.width = (currentSlide / totalSlides) * 100 + '%';
+        document.getElementById('prevBtn').disabled = currentSlide === 1;
+        document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    function checkAnswer(slideNum, selected, isCorrect) {
+        const options = document.querySelectorAll(`[data-slide="${slideNum}"] .mcq-option`);
+        const feedback = document.getElementById(`feedback-${slideNum}`);
+        options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+        event.target.classList.add('selected');
+        if (isCorrect) {
+            event.target.classList.add('correct');
+            feedback.textContent = '✅ Correct! Well done!';
+            feedback.className = 'feedback correct show';
+        } else {
+            event.target.classList.add('incorrect');
+            feedback.textContent = '❌ Not quite. Click "Show Answer" below.';
+            feedback.className = 'feedback incorrect show';
+        }
+    }
+
+    function toggleExplanation(slideNum) {
+        const expDiv = document.getElementById(`explanation-${slideNum}`);
+        const btn = event.target;
+        if (expDiv.classList.contains('show')) {
+            expDiv.classList.remove('show');
+            btn.textContent = 'Show Answer';
+            btn.style.background = '#003D5C';
+            return;
+        }
+
+        const answers = {
+            3: {
+                correct: "B", 
+                why: "Law of Demand! Lower price = More people buy. When Tesla cuts price by £10,000, more people can afford it, so sales go UP!",
+                key: "Remember: Price ↓ = Buy MORE. Price ↑ = Buy LESS."
+            },
+            6: {
+                correct: "B",
+                why: "Law of Supply! Higher price = More profit = Farmers grow MORE coffee. When prices double, farmers plant more coffee trees to make more money!",
+                key: "Remember: Price ↑ = Make MORE. Price ↓ = Make LESS."
+            },
+            11: {
+                correct: "B",
+                why: "SURPLUS! Shop made 100 but only sold 60. 40 coffees left over = surplus. To sell the leftovers, price must DROP. Lower price → More people buy → Surplus disappears!",
+                key: "Surplus (leftovers) → Price falls. Shortage (sold out) → Price rises."
+            },
+            14: {
+                correct: "B",
+                why: "This creates a BARRIER TO ENTRY. £3,000 + 3 years makes it HARD to become a taxi driver. This stops free entry, breaking assumption #2. New drivers can't easily enter market!",
+                key: "Barriers to entry = anything that makes it hard/expensive to start a business."
+            },
+            19: {
+                correct: "B",
+                why: "'Zero ECONOMIC profit' is confusing! It actually means the owner earns normal salary + covers all costs. SUPERNORMAL profit is zero, but owner still gets paid fairly. That's why they stay open!",
+                key: "Economic profit = Revenue - ALL costs (including owner's time). Zero economic profit = owner still earns fair wage."
+            }
+        };
+
+        const ans = answers[slideNum];
+        expDiv.innerHTML = `
+            <h4 style="color: #065F46; font-size: 20px;">✅ Correct Answer: ${ans.correct}</h4>
+            <p style="font-size: 18px; margin: 15px 0;"><strong>Why?</strong> ${ans.why}</p>
+            <p style="margin-top: 20px; padding: 15px; background: #E0F2FE; border-left: 4px solid #0284C7; border-radius: 4px; font-size: 18px;"><strong>📚 Remember:</strong> ${ans.key}</p>
+        `;
+        expDiv.classList.add('show');
+        btn.textContent = 'Hide Answer';
+        btn.style.background = '#DC143C';
+    }
+
+    showSlide(1);
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') changeSlide(-1);
+        else if (event.key === 'ArrowRight') changeSlide(1);
+    });
+</script>
+```
+
+</body>
+</html>
